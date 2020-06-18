@@ -48,7 +48,7 @@ class MainComponent extends React.Component {
           <div style={{ display: 'flex', width: '30%', flexWrap: 'wrap', justifyContent: 'space-between' }}>
             <div>
               <label>HD Enabled</label>
-              <input type="checkbox" checked={hd} onChange={(e) => {this.setState({ hd: e.target.checked }) }}></input>
+              <input type="checkbox" checked={hd} onChange={(e) => { this.setState({ hd: e.target.checked }) }}></input>
             </div>
             <div>
               <label>One Way Enabled</label>
@@ -59,8 +59,8 @@ class MainComponent extends React.Component {
         <h2>Popular</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {filteredCities.filter(c => c.popular).map(city => {
-            return <div style={{ padding: '20px', margin: '20px', background: '#ccc', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <img src={city.icon} height='40' width='40' style={{ borderRadius: '50%' }}></img>
+            return <div style={{ width: '15%', padding: '1rem', marginTop: '2rem', marginLeft: '2rem', background: '#ccc', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <img src={city.icon} style={{ height: '10rem', width: '10rem', borderRadius: '50%' }}></img>
               <div style={{ marginTop: '10px' }}>{city.name}</div>
             </div>
           })}
@@ -70,8 +70,8 @@ class MainComponent extends React.Component {
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {
             filteredCities.filter(c => !c.popular).map(city => {
-              return <div style={{ padding: '20px', margin: '20px', background: '#ccc', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <img src={city.icon} height='40' width='40' style={{ borderRadius: '50%' }}></img>
+              return <div style={{ width: '15%', padding: '1rem', marginTop: '2rem', marginLeft: '2rem', background: '#ccc', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <img src={city.icon} style={{ height: '10rem', width: '10rem', borderRadius: '50%' }}></img>
                 <div style={{ marginTop: '10px' }}>{city.name}</div>
               </div>
             })
